@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="main-container">
+      <div class="todo-list-container">
+        <div class="todo-alerts todo-title">
+          <p class="alert-text"></p>
+          <h1 class="title-text">Todo List</h1>
+        </div>
+        <div class="todo-control">
+          <form class="todo-form">
+            <input type="text" class="input" placeholder="Add Todo..." />
+            <button type="submit" class="submit-btn">submit</button>
+          </form>
+        </div>
+        <div class="todo-options">
+          <button class="option-btn active" data-id="all">View All</button>
+          <button class="option-btn" data-id="completed">View Completed</button>
+          <button class="option-btn" data-id="remaining">View Remaining</button>
+        </div>
+        <div class="todo-items-container"></div>
+        <button class="clear-all-btn">Clear All</button>
+      </div>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
