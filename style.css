@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -54,18 +55,38 @@ button {
 /* --------------------------form  */
 
 .todo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   border: none;
   background: #eeeeee;
   padding: 1rem;
   color: #393e46;
   font-size: 1.2rem;
+}
+
+.input::-webkit-input-placeholder {
+  color: #393e4681;
+}
+
+.input::-moz-placeholder {
+  color: #393e4681;
+}
+
+.input:-ms-input-placeholder {
+  color: #393e4681;
+}
+
+.input::-ms-input-placeholder {
+  color: #393e4681;
 }
 
 .input::placeholder {
@@ -76,9 +97,13 @@ button {
   padding: 0.5rem 2rem;
   background: #222831;
   color: white;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 7rem;
   flex: 0 0 7rem;
   text-transform: capitalize;
   letter-spacing: 1.5px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .submit-btn:hover {
@@ -87,6 +112,8 @@ button {
 
 /*---------------------------- options btns */
 .todo-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0 2rem;
   padding: 1rem 0;
@@ -108,12 +135,19 @@ button {
 
 /* ------------------------------------single todo item */
 .todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -127,8 +161,12 @@ button {
 }
 
 .todo-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -141,6 +179,7 @@ button {
   width: 30px;
   border: 2px solid green;
   border-radius: 50%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -198,12 +237,19 @@ button {
 
   .submit-btn {
     padding: 0.5rem 0.8rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 5rem;
     flex: 0 0 5rem;
     letter-spacing: 1;
   }
 
   .todo-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     gap: 0.5rem;
   }
@@ -234,18 +280,30 @@ button {
   }
 
   .todo-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     gap: 1rem;
   }
 
   .todo-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
   .submit-btn {
     padding: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 2rem;
     flex: 0 0 2rem;
   }
 }
